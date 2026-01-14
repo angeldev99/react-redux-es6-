@@ -15,7 +15,6 @@ import { connect } from 'react-redux'
 @connect(() => ({}))
 export default class SocketOn extends Component {
   componentDidMount() {
-    console.log('socket didmount')
     this.init()
   }
 

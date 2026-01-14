@@ -119,7 +119,6 @@ export default class Login extends Component {
 
   render() {
     const { getFieldDecorator } = this.props.form
-    console.log(this.props.loginResponse)
     return (
       <div className="login-container">
         <div className="extraLink" />

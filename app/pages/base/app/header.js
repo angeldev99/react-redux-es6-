@@ -43,7 +43,6 @@ export default class Header extends Component {
       content: '确认退出登录吗？',
       onOk() {
         logout({}, (result) => {
-          // console.log(result)
           if (result.status === 1) {
             sessionStorage.clear()
             config.staff = {}
@@ -82,18 +81,6 @@ export default class Header extends Component {
   }
 
   logoClick = () => {
-    // const nav = JSON.parse(sessionStorage.getItem('gMenuList'))
-    // if (nav[0] && nav[0].children && nav[0].children[0].children && nav[0].children[0].children[0] && nav[0].children[0].children[0].resKey) {
-    //   hashHistory.push(nav[0].children[0].children[0].resKey)
-    //   sessionStorage.setItem('topMenuReskey', nav[0].resKey)
-    // }
-    // if (nav[0] && nav[0].children && nav[0].children[0].resKey) {
-    //   hashHistory.push(nav[0].children[0].resKey)
-    // } else {
-    //   hashHistory.push('/')
-    // }
-    // console.log(nav)
-    // hashHistory.push()
   }
 
   render() {
@@ -106,7 +93,6 @@ export default class Header extends Component {
     if (sessionStorage.getItem('userinfo')) {
       name = JSON.parse(sessionStorage.getItem('userinfo')).chineseName
     }
-    // console.log(JSON.parse(sessionStorage.getItem('userinfo')))
     const userCenter = (
       <Menu className="nav-dropmenu">
         <Menu.Item key="1">

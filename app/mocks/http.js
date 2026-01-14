@@ -19,7 +19,6 @@ http.createServer((req, res) => {
     let postData = ''
     req.addListener('data', dataBuffer => postData += dataBuffer)
     req.addListener('end', () => {
-      console.log('url=>', req.url)
       postData = JSON.parse(postData)
       const originData = _map[req.url]
         ? Mock.mock(_map[req.url])
@@ -34,4 +33,3 @@ http.createServer((req, res) => {
     })
   }
 }).listen(1111)
-console.log('listening port 1111')

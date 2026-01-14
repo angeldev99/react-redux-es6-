@@ -50,16 +50,6 @@ export default class Drawer extends Component {
 
   // 监测visible属性,
   componentWillReceiveProps(nextProps) {
-    /* const {
-      visible = true,
-    } = this.props
-    console.log(visible)
-    console.log(nextProps)
-    if (visible || nextProps.visible) {
-      this.initDrawer()
-    } else {
-      this.removeDrawer()
-    } */
   }
 
   componentDidUpdate() {
@@ -67,9 +57,7 @@ export default class Drawer extends Component {
   }
 
   componentWillUnmount() {
-    // <setTimeo></setTimeo>ut(() => {
     ReactDOM.unmountComponentAtNode(this.popup)
-    // }, 300)
   }
 
   // 初始化抽屉

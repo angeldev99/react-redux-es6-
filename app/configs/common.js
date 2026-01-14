@@ -23,7 +23,6 @@ const _fetchLoginByTicket = async ticket => new Promise((resolve) => {
     resolve(response.data)
   }, (response) => {
     const obj = parseQueryString(window.location.href)
-    console.log(obj)
     if (obj.ticket || obj.mode) {
       message.info('登录过期或服务不可用')
     } else {
